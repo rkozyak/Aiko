@@ -1,4 +1,4 @@
-//import configs
+//Imports configs
 require('dotenv').config();
 const config = require('./config.json')
 
@@ -19,21 +19,23 @@ for (const file of commandFiles) {
     client.commands.set(command.name, command);
 }
 
-
+//Tells console that the bot it online
 client.once('ready', () => {
     console.log('Aiko is online!');
     memberCounter(client);
     sendDaily();
 });
 
+//Gives new members the pending role and sends a message welcoming them
 client.on('guildMemberAdd', guildMember => {
     let welcomeRole = guildMember.guild.roles.cache.find(role => role.name === 'swag pending');
 
     guildMember.roles.add(welcomeRole);
     guildMember.guild.channels.cache.get('824491352153653260').send(`Welcome <@${guildMember.user.id}> to swagalicious homies! Please read the <#824498701657440296> and do -acceptrules in <#826667824449323008>!`)
-    guildMember.send('hey :)')
+    guildMember.send('Welcome to swagalicious homies :)')
 });
 
+//Command Handler
 client.on('message', message => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
 
@@ -71,7 +73,7 @@ client.on('message', message => {
 client.login(process.env.DISCORD_TOKEN);
 
 
-//daily message by piman
+//Daily Message (WIP)
 async function sendDaily() {
     const sendDailyMessage = async () => {
         console.log('sending daily quote...')
@@ -104,7 +106,7 @@ async function sendDaily() {
 
         client.destroy();
     }
-    //wait until next midnight
+    //Waits until next midnight
     await new Promise((resolve) => {
         const currentTime = Date.now();
         const nextMidnight = ((Math.ceil(currentTime / 86400000) + 1) * 86400000)
@@ -113,7 +115,7 @@ async function sendDaily() {
             resolve();
         }, nextMidnight - currentTime)
     })
-    //start cycle
+    //Start cycle
     while (true) {
         sendDailyMessage();
         await new Promise((resolve) => {

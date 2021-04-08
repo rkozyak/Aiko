@@ -1,6 +1,7 @@
 module.exports = {
     name: 'rules',
     description: "this tells you the rules",
+    //Creates an embed that contains the rules
     execute(message, args, Discord){
         const newEmbed = new Discord.MessageEmbed()
         .setColor('#0f4e5f')
@@ -14,6 +15,7 @@ module.exports = {
         )
         .setFooter('Made with ❤ by richie#6666');
 
+        //Sends the embed in the same channel the person used the command in
         message.channel.send(newEmbed);
     }
 }

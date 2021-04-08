@@ -3,6 +3,7 @@ module.exports = {
     name: 'mute',
     description: "This mutes a member",
     execute(message, args){
+        //If they have the admin role it will give the mentioned player the muted role which does not have access to send messages 
         if(message.member.roles.cache.has('826662253285343285')){
             const target = message.mentions.users.first();
             if (target) {
@@ -29,6 +30,7 @@ module.exports = {
             } else {
                 message.channel.send('Cant find that member!');
             }
+        //If they dont have the admin role then it will tell them they cant use this command
         } else {
             message.reply('You dont have sufficient permissions!');
         }

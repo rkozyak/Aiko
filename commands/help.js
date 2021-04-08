@@ -2,6 +2,7 @@ module.exports = {
     name: 'help',
     description: "this tells you all the commands",
     execute(message, args, Discord){
+         //Creates an embed that contains all of Aiko's commands
         const newEmbed = new Discord.MessageEmbed()
         .setColor('#0f4e5f')
         .setTitle('Help')
@@ -17,6 +18,7 @@ module.exports = {
         )
         .setFooter('Made with ❤ by richie#0437');
 
+         //Sends the embed in the same channel the person used the command in
         message.channel.send(newEmbed);
     }
 }
