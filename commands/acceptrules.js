@@ -1,7 +1,7 @@
 module.exports = {
     name: 'acceptrules',
     description: "command to add verified role",
-    execute(message, args){
+    execute(client, message, args){
         
         //If they have the verrified role then it will send this message
         if(message.member.roles.cache.has('826842290206801931')){

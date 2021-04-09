@@ -1,7 +1,7 @@
 module.exports = {
     name: 'unmute',
     description: "This unmutes a member",
-    execute(message, args){
+    execute(client, message, args){
         
         //If they have the admin role it will remove the muted role from the mentioned player and add back thier old role 
         if(message.member.roles.cache.has('826662253285343285')){
