@@ -73,7 +73,7 @@ client.on('message', message => {
 client.login(process.env.DISCORD_TOKEN);
 
 
-//Daily Message (WIP)
+//Daily Message
 client.on('ready', () => {
     setTimeout(function(){ // in leftToEight() milliseconds run this:
         sendMessage(); // send the message once
