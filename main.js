@@ -74,7 +74,7 @@ client.login(process.env.DISCORD_TOKEN);
 
 
 //Daily Message
-client.on('ready', () => {
+client.once('ready', () => {
     setTimeout(function(){ // in leftToEight() milliseconds run this:
         sendMessage(); // send the message once
         var dayMillseconds = 1000 * 60 * 60 * 24;
