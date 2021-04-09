@@ -102,5 +102,6 @@ function sendMessage(){
     var guild = client.guilds.cache.get('824491352153653258');
     if(guild && guild.channels.cache.get('827930016083738664')){
         guild.channels.cache.get('827930016083738664').send(newEmbed);
+        console.log('Aiko sent the daily quote!');
     }
 }
