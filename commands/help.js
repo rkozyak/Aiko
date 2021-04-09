@@ -11,8 +11,8 @@ module.exports = {
         .addFields(
             {name: '-rules', value: 'Tells you the rules'},
             {name: '-acceptrules', value: 'Accepts the rules and gives you the verified role'},
-            {name: '-play, -p, -pl', value: 'Aiko joins your voice channel and plays some music'},
-            {name: '-leave, -l', value: 'Aiko leaves your voice channel'},
+            {name: '-play', value: 'Aiko joins your voice channel and plays some music'},
+            {name: '-leave', value: 'Aiko leaves your voice channel'},
             {name: '-ticket, -t', value: 'To get in contact with an admin'},
             {name: '-quote, -q', value: 'Tells you a quote :)'},
             {name: '-ping', value: 'pong!'}
