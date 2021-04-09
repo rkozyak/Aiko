@@ -86,7 +86,7 @@ client.once('ready', () => {
 
 function leftToEight(){
     var d = new Date();
-    return (-d + d.setHours(12,0,0,0));
+    return (-d + d.setHours(8,0,0,0));
 }
 
 const selectedQuote = quotes[Math.floor(Math.random() * quotes.length)]
