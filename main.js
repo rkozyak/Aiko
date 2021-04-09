@@ -24,7 +24,6 @@ for (const file of commandFiles) {
 client.once('ready', () => {
     console.log('Aiko is online!');
     memberCounter(client);
-    //sendDaily();
 });
 
 //Gives new members the pending role and sends a message welcoming them
@@ -104,5 +103,4 @@ function sendMessage(){
     if(guild && guild.channels.cache.get('827930016083738664')){
         guild.channels.cache.get('827930016083738664').send(newEmbed);
     }
-
 }
