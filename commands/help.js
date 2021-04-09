@@ -1,7 +1,8 @@
 module.exports = {
     name: 'help',
+    aliases: ['h'],
     description: "this tells you all the commands",
-    execute(message, args, Discord){
+    execute(client, message, args, Discord){
          //Creates an embed that contains all of Aiko's commands
         const newEmbed = new Discord.MessageEmbed()
         .setColor('#0f4e5f')

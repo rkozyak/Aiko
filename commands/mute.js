@@ -2,7 +2,7 @@ const ms = require('ms');
 module.exports = {
     name: 'mute',
     description: "This mutes a member",
-    execute(message, args){
+    execute(client, message, args){
         //If they have the admin role it will give the mentioned player the muted role which does not have access to send messages 
         if(message.member.roles.cache.has('826662253285343285')){
             const target = message.mentions.users.first();

@@ -2,8 +2,9 @@ const quotes = require('../resources/quote.json')
 
 module.exports = {
     name: 'quote',
+    aliases: ['q'],
     description: "this sends you a random quote from a list of quotes",
-    execute(message, args, Discord) {
+    execute(client, message, args, Discord) {
         //Finds a random quote
         const selectedQuote = quotes[Math.floor(Math.random() * quotes.length)]
 

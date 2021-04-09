@@ -2,7 +2,7 @@ module.exports = {
     name: 'rules',
     description: "this tells you the rules",
     //Creates an embed that contains the rules
-    execute(message, args, Discord){
+    execute(client, message, args, Discord){
         const newEmbed = new Discord.MessageEmbed()
         .setColor('#0f4e5f')
         .setTitle('Rules')
