@@ -45,19 +45,18 @@ client.once('ready', () => {
 
 function leftToEight(){
     var d = new Date();
-    return (-d + d.setHours(16,0,0,0));
+    return (-d + d.setHours(8,0,0,0));
 }
 
-const selectedQuote = quotes[Math.floor(Math.random() * quotes.length)]
-const newEmbed = new Discord.MessageEmbed({
-    color: '#0f4e5f',
-    title: 'Daily Motivational Quote :))',
-    fields: [
-        { name: `"${selectedQuote.quote}"`, value: `- ${selectedQuote.author}` }
-    ]
-}).setFooter('Made with ❤ by richie#0437').setThumbnail(selectedQuote.thumbnail)
-
 function sendMessage(){
+    const selectedQuote = quotes[Math.floor(Math.random() * quotes.length)]
+    const newEmbed = new Discord.MessageEmbed({
+        color: '#0f4e5f',
+        title: 'Daily Motivational Quote :))',
+        fields: [
+            { name: `"${selectedQuote.quote}"`, value: `- ${selectedQuote.author}` }
+        ]
+    }).setFooter('Made with ❤ by richie#0437').setThumbnail(selectedQuote.thumbnail)
     var guild = client.guilds.cache.get('824491352153653258');
     if(guild && guild.channels.cache.get('827930016083738664')){
         guild.channels.cache.get('827930016083738664').send(newEmbed);
