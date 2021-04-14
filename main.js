@@ -46,7 +46,7 @@ client.once('ready', () => {
 
 function leftToEight(){
     var d = new Date();
-    return (-d + d.setHours(8,0,0,0));
+    return (-d + d.setHours(16,0,0,0));
 }
 
 const newEmbed = new Discord.MessageEmbed({
