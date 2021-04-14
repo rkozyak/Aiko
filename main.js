@@ -38,7 +38,6 @@ client.once('ready', () => {
         sendMessage(); // send the message once
         var dayMillseconds = 1000 * 60 * 60 * 24;
         setInterval(function(){ // repeat this every 24 hours
-            const selectedQuote = quotes[Math.floor(Math.random() * quotes.length)]
             sendMessage();
         }, dayMillseconds)
     }, leftToEight())
@@ -49,6 +48,7 @@ function leftToEight(){
     return (-d + d.setHours(16,0,0,0));
 }
 
+const selectedQuote = quotes[Math.floor(Math.random() * quotes.length)]
 const newEmbed = new Discord.MessageEmbed({
     color: '#0f4e5f',
     title: 'Daily Motivational Quote :))',
