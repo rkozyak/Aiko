@@ -4,7 +4,7 @@ module.exports = {
     description: "Command to clear text",
     async execute(client, message, args){
         if(message.member.roles.cache.has('826662253285343285')){
-            if(!args[0]) return message.reply("Please enter the ammount of messages that you want to clear!");
+            if(!args[0]) return message.reply("Please enter the amount of messages that you want to clear!");
             if(isNaN(args[0])) return message.reply("Please enter a numerical value!");
     
             if(args[0] > 100) return message.reply("Please use a smaller value");

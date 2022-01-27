@@ -1,6 +1,6 @@
 module.exports = {
     name: 'admin',
-    description: "adnin only command",
+    description: "admin only command",
     execute(client, message, args){
         
         //If the person has the admin role it will send test

@@ -11,10 +11,6 @@ client.once('ready', () => {
     sendDaily();
 });
 
-
-
-
-
 async function sendDaily() {
     const sendDailyMessage = async () => {
         const guild = client.guilds.cache.get("824491352153653258")
